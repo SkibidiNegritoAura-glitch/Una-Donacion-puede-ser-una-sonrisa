@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cristo Vencedor · Donar es cuidar</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root{
+  --pink:#ff5fa2; --pink2:#ff9fc8; --hot:#ff3d8d; --soft:#fff3f8;
+  --ink:#351c31; --muted:#765c70; --white:#fff; --line:#ffd1e5;
+  --cyan:#63e6e2; --purple:#a98cff;
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{
+ margin:0;font-family:Nunito,sans-serif;color:var(--ink);
+ background:
+ radial-gradient(circle at 10% 10%,#ffd7ea 0 2px,transparent 3px),
+ radial-gradient(circle at 90% 30%,#ffc4df 0 2px,transparent 3px),
+ linear-gradient(135deg,#fff7fb,#f9f3ff 55%,#fff);
+ background-size:70px 70px,90px 90px,auto;
+}
+nav{
+ position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;
+ padding:14px 6%;background:rgba(255,255,255,.82);backdrop-filter:blur(18px);
+ border-bottom:1px solid var(--line)
+}
+.logo{font-family:"Space Grotesk";font-weight:700;color:var(--hot);letter-spacing:-1px}
+nav a{color:var(--ink);text-decoration:none;margin-left:20px;font-weight:700;font-size:.9rem}
+.hero{min-height:88vh;display:grid;place-items:center;padding:60px 7%;position:relative;overflow:hidden}
+.hero:before{
+ content:"";position:absolute;width:500px;height:500px;border-radius:50%;
+ background:radial-gradient(circle,#ffb5d6,transparent 68%);right:-130px;top:-150px;opacity:.6
+}
+.hero-grid{max-width:1150px;width:100%;display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}
+.badge{display:inline-block;padding:8px 15px;border:1px solid #ffb5d6;border-radius:999px;background:#fff8fc;color:var(--hot);font-weight:800}
+h1{font-family:"Space Grotesk";font-size:clamp(3rem,6vw,5.8rem);line-height:.94;margin:18px 0}
+.gradient{background:linear-gradient(90deg,var(--hot),#a66cff);-webkit-background-clip:text;color:transparent}
+.hero p{font-size:1.15rem;color:var(--muted);max-width:650px;line-height:1.7}
+.cta{display:inline-block;margin-top:18px;padding:14px 23px;border-radius:18px;background:var(--hot);color:#fff;text-decoration:none;font-weight:800;box-shadow:0 12px 30px #ff5fa244}
+.kitty-card{
+ min-height:470px;border:2px solid #ffb9d8;border-radius:38px;background:rgba(255,255,255,.7);
+ box-shadow:0 30px 70px #b95b9025;display:grid;place-items:center;position:relative;overflow:hidden
+}
+.kitty{width:245px;height:205px;background:#fff;border:5px solid var(--ink);border-radius:48% 48% 44% 44%;position:relative;box-shadow:inset 0 -10px #fff0f6}
+.ear{position:absolute;top:-35px;width:75px;height:70px;background:#fff;border:5px solid var(--ink);transform:rotate(38deg);border-radius:12px 45px 10px 45px}
+.ear.left{left:15px}.ear.right{right:15px;transform:scaleX(-1) rotate(38deg)}
+.eye{position:absolute;width:13px;height:20px;background:var(--ink);border-radius:50%;top:85px}.eye.l{left:65px}.eye.r{right:65px}
+.nose{position:absolute;width:17px;height:13px;background:#ffd84d;border:3px solid var(--ink);border-radius:50%;left:calc(50% - 8px);top:110px}
+.whisker{position:absolute;width:55px;height:2px;background:var(--ink);top:112px}.w1{left:2px;transform:rotate(10deg)}.w2{left:0;top:128px;transform:rotate(-8deg)}.w3{right:2px;transform:rotate(-10deg)}.w4{right:0;top:128px;transform:rotate(8deg)}
+.bow{position:absolute;right:20px;top:15px;width:65px;height:40px}.bow:before,.bow:after{content:"";position:absolute;width:34px;height:31px;background:#ff4c94;border:4px solid var(--ink);border-radius:50% 60% 45% 60%}.bow:before{transform:rotate(25deg)}.bow:after{right:0;transform:rotate(-25deg)}.bow i{position:absolute;width:17px;height:17px;border:4px solid var(--ink);background:#ff80b5;border-radius:50%;left:23px;top:9px;z-index:2}
+.float{position:absolute;font-size:2rem;animation:float 3s ease-in-out infinite}.f1{top:45px;left:55px}.f2{right:55px;bottom:55px;animation-delay:1s}.f3{left:75px;bottom:55px;animation-delay:.5s}
+@keyframes float{50%{transform:translateY(-12px) rotate(8deg)}}
+section{padding:95px 7%}.wrap{max-width:1100px;margin:auto}
+.kicker{color:var(--hot);font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:.8rem}
+h2{font-family:"Space Grotesk";font-size:clamp(2rem,4vw,3.3rem);margin:8px 0 15px}
+.lead{color:var(--muted);font-size:1.05rem;line-height:1.7;max-width:780px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:35px}
+.card{background:#fff;border:1px solid var(--line);border-radius:25px;padding:26px;box-shadow:0 15px 40px #8c426f12}
+.icon{font-size:2rem}.card h3{margin:12px 0 8px}.card p{color:var(--muted);line-height:1.6;margin:0}
+.problem{background:linear-gradient(135deg,#fff,#fff0f7)}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:35px}
+.good,.bad{padding:28px;border-radius:28px;border:1px solid var(--line);background:#fff}
+.good{border-top:6px solid #52d5bd}.bad{border-top:6px solid #ff6b9e}
+.good li,.bad li{margin:12px 0;color:var(--muted)}
+.solution{background:#211a2d;color:#fff;position:relative;overflow:hidden}
+.solution .lead{color:#d9cedb}.solution .kicker{color:#ff8abb}
+.poster-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:38px}
+.poster{
+ min-height:245px;padding:25px;border-radius:28px;background:linear-gradient(145deg,#ff5fa2,#b275ff);
+ display:flex;flex-direction:column;justify-content:space-between;border:2px solid #ffffff44;
+ box-shadow:0 18px 40px #0003;transform:rotate(var(--r))
+}
+.poster:nth-child(2){background:linear-gradient(145deg,#ff9ec8,#ff5fa2)}.poster:nth-child(3){background:linear-gradient(145deg,#70e6e1,#9d83ff)}
+.poster:nth-child(4){background:linear-gradient(145deg,#ff80b6,#ffcf6d)}.poster:nth-child(5){background:linear-gradient(145deg,#9e8aff,#ff72b1)}.poster:nth-child(6){background:linear-gradient(145deg,#63e6e2,#ff79b5)}
+.poster small{font-weight:800;letter-spacing:1px}.poster strong{font-family:"Space Grotesk";font-size:1.6rem;line-height:1.1}
+.schedule{margin-top:35px;background:#fff;border:1px solid var(--line);border-radius:30px;overflow:hidden;box-shadow:0 18px 45px #8c426f12}
+table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:18px 20px;border-bottom:1px solid #f3dbe7}th{background:#fff0f7;color:var(--hot)}td{color:var(--muted)}tr:last-child td{border-bottom:0}
+.callout{margin-top:30px;padding:25px;border-radius:25px;background:#fff4a8;border:2px dashed #ffbd42;font-weight:800;text-align:center}
+footer{text-align:center;padding:45px 7%;background:#fff;color:var(--muted);border-top:1px solid var(--line)}
+@media(max-width:800px){.hero-grid,.compare{grid-template-columns:1fr}.cards,.poster-grid{grid-template-columns:1fr}.kitty-card{min-height:360px}nav a{display:none}section{padding:70px 6%}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">♡ CRISTO VENCEDOR</div>
+  <div><a href="#problema">Problema</a><a href="#solucion">Pancartas</a><a href="#horarios">Horarios</a></div>
+</nav>
+
+<header class="hero">
+ <div class="hero-grid">
+  <div>
+   <span class="badge">🌸 Campaña comunitaria · Donar es cuidar</span>
+   <h1>Una donación<br>puede ser <span class="gradient">una sonrisa.</span></h1>
+   <p>Olla Común Cristo Vencedor presenta una campaña de concientización para promover donaciones en buen estado. Con pancartas claras, mensajes reflexivos y una recepción organizada, queremos recordar que ayudar también significa cuidar.</p>
+   <a class="cta" href="#solucion">Ver nuestra solución →</a>
+  </div>
+  <div class="kitty-card">
+   <span class="float f1">🎀</span><span class="float f2">💗</span><span class="float f3">✦</span>
+   <div class="kitty"><div class="ear left"></div><div class="ear right"></div><div class="eye l"></div><div class="eye r"></div><div class="nose"></div><div class="whisker w1"></div><div class="whisker w2"></div><div class="whisker w3"></div><div class="whisker w4"></div><div class="bow"><i></i></div></div>
+  </div>
+ </div>
+</header>
+
+<section id="problema" class="problem">
+ <div class="wrap">
+  <span class="kicker">01 · El problema</span>
+  <h2>Cuando ayudar no empieza por revisar.</h2>
+  <p class="lead">En ocasiones, una olla común puede recibir alimentos o recursos vencidos, próximos a vencer o en condiciones inadecuadas. Una donación debe ser útil y segura: entregar algo que ya no está apto para su uso puede convertir una intención solidaria en un problema.</p>
+  <div class="cards">
+   <article class="card"><div class="icon">🔎</div><h3>Falta de revisión</h3><p>No siempre se verifica la fecha de vencimiento, el envase o las condiciones de conservación antes de donar.</p></article>
+   <article class="card"><div class="icon">📦</div><h3>Excedentes</h3><p>Empresas y comercios pueden tener productos que ya no comercializan y que requieren una revisión antes de ser destinados a donación.</p></article>
+   <article class="card"><div class="icon">💭</div><h3>Falta de información</h3><p>Algunas personas pueden pensar que donar cualquier producto es mejor que desecharlo, sin considerar su estado.</p></article>
+  </div>
+  <div class="compare">
+   <div class="good"><h3>♡ Producto en buen estado</h3><ul><li>Puede aprovecharse de forma adecuada.</li><li>Representa una donación responsable.</li><li>Contribuye a cuidar a quien recibe.</li></ul></div>
+   <div class="bad"><h3>⚠ Producto vencido o inadecuado</h3><ul><li>Puede representar un riesgo para la salud.</li><li>Puede terminar desperdiciándose.</li><li>Puede generar pérdida de confianza.</li></ul></div>
+  </div>
+ </div>
+</section>
+
+<section id="solucion" class="solution">
+ <div class="wrap">
+  <span class="kicker">02 · Nuestra solución</span>
+  <h2>Pancartas que hacen pensar. 💗</h2>
+  <p class="lead">La propuesta se centra en colocar pancartas llamativas y reflexivas en puntos de recepción y espacios comunitarios. La meta es que cada donante se detenga unos segundos, revise lo que entrega y recuerde que una ayuda de calidad empieza con un producto en buen estado.</p>
+  <div class="poster-grid">
+   <div class="poster" style="--r:-2deg"><small>MENSAJE #01</small><strong>“DONAR NO ES DESECHAR.”<br>Antes de entregar, piensa en quién lo recibirá.</strong><small>♡ Donar es cuidar</small></div>
+   <div class="poster" style="--r:2deg"><small>MENSAJE #02</small><strong>“¿LO COMERÍAS TÚ?<br>Entonces, ¿por qué donarlo vencido?”</strong><small>♡ Revisa antes de donar</small></div>
+   <div class="poster" style="--r:-1deg"><small>MENSAJE #03</small><strong>“AYUDAR TAMBIÉN ES CUIDAR.”</strong><small>♡ Una donación segura importa</small></div>
+   <div class="poster" style="--r:2deg"><small>MENSAJE #04</small><strong>“TU DONACIÓN HABLA DE TI.”<br>Entrégala en buen estado.</strong><small>♡ Piensa · Revisa · Dona</small></div>
+   <div class="poster" style="--r:-2deg"><small>MENSAJE #05</small><strong>“UNA FECHA NO ES UN DETALLE.”</strong><small>♡ Es parte de una donación responsable</small></div>
+   <div class="poster" style="--r:1deg"><small>MENSAJE #06</small><strong>“NO ENTREGUES LO QUE YA NO SIRVE.”</strong><small>♡ Entrega lo que pueda ayudar</small></div>
+  </div>
+  <div class="callout">✨ Mensaje central: “Antes de donar, revisa. Antes de entregar, piensa. Porque ayudar de verdad también significa cuidar.”</div>
+ </div>
+</section>
+
+<section id="horarios">
+ <div class="wrap">
+  <span class="kicker">03 · Recepción organizada</span>
+  <h2>Horarios de entrega de alimentos y recursos</h2>
+  <p class="lead">Para facilitar la revisión y organización de las donaciones, se propone un horario de recepción por tipo de recurso. <strong>Estos horarios son parte del ejemplo ficticio del proyecto.</strong></p>
+  <div class="schedule">
+   <table>
+    <thead><tr><th>Hora</th><th>Donación / recurso</th><th>Responsable</th></tr></thead>
+    <tbody>
+     <tr><td>08:00 a. m.</td><td>Alimentos secos</td><td>NutriApoyo Perú</td></tr>
+     <tr><td>10:00 a. m.</td><td>Frutas y verduras</td><td>Comercios aliados</td></tr>
+     <tr><td>12:00 p. m.</td><td>Alimentos envasados</td><td>Empresas colaboradoras</td></tr>
+     <tr><td>03:00 p. m.</td><td>Agua y bebidas</td><td>Donantes comunitarios</td></tr>
+     <tr><td>05:00 p. m.</td><td>Productos de higiene</td><td>Comunidad</td></tr>
+    </tbody>
+   </table>
+  </div>
+  <div class="callout">💡 Antes de recibir una donación: revisar fecha de vencimiento · estado del envase · conservación · utilidad del producto.</div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <span class="kicker">04 · Nuestro objetivo</span>
+  <h2>Que una buena intención se convierta en una buena acción.</h2>
+  <p class="lead">Las pancartas buscan crear una cultura de donación responsable. No se trata solamente de entregar algo, sino de preguntarnos si aquello realmente puede ayudar a otra persona.</p>
+ </div>
+</section>
+
+<footer>
+ <strong>♡ Olla Común Cristo Vencedor</strong><br>
+ Campaña ficticia · “Donar es cuidar” · NutriApoyo Perú
+</footer>
+</body>
+</html>
